@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  WineFlight
+//  Wine Flight
 //
 //  Created by James McDougall on 12/15/20.
 //
