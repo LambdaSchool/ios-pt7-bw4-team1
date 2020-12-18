@@ -14,6 +14,8 @@
 		A8C5182F2589C06000676CB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C5182D2589C06000676CB3 /* Main.storyboard */; };
 		A8C518312589C06200676CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C518302589C06200676CB3 /* Assets.xcassets */; };
 		A8C518342589C06200676CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C518322589C06200676CB3 /* LaunchScreen.storyboard */; };
+		CA4C4227258B0EED00B3F00A /* NFC_TagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */; };
+		CA4C4234258B118800B3F00A /* NFC_TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A8C518302589C06200676CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C518332589C06200676CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8C518352589C06200676CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NFC_TagView.storyboard; sourceTree = "<group>"; };
+		CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFC_TagViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				A8C518302589C06200676CB3 /* Assets.xcassets */,
 				A8C518322589C06200676CB3 /* LaunchScreen.storyboard */,
 				A8C518352589C06200676CB3 /* Info.plist */,
+				CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */,
+				CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */,
 			);
 			path = "Wine Flight";
 			sourceTree = "<group>";
@@ -101,6 +107,7 @@
 				TargetAttributes = {
 					A8C518232589C06000676CB3 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -129,7 +136,7 @@
 			files = (
 				A8C518342589C06200676CB3 /* LaunchScreen.storyboard in Resources */,
 				A8C518312589C06200676CB3 /* Assets.xcassets in Resources */,
-				3C329998258B164C0053FA36 /* Mapview.storyboard in Resources */,
+				CA4C4227258B0EED00B3F00A /* NFC_TagView.storyboard in Resources */,
 				A8C5182F2589C06000676CB3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +151,7 @@
 				A8C5182C2589C06000676CB3 /* ViewController.swift in Sources */,
 				A8C518282589C06000676CB3 /* AppDelegate.swift in Sources */,
 				A8C5182A2589C06000676CB3 /* SceneDelegate.swift in Sources */,
+				CA4C4234258B118800B3F00A /* NFC_TagViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,15 +298,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R6MQNLHPL;
 				INFOPLIST_FILE = "Wine Flight/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LambdaSchool.Wine-Flight";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -309,9 +320,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R6MQNLHPL;
 				INFOPLIST_FILE = "Wine Flight/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
