@@ -12,27 +12,25 @@ class NFC_TagViewController: UIViewController, NFCTagReaderSessionDelegate {
     
     @IBOutlet weak var UIDLabel: UILabel!
     var session: NFCReaderSession?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
+    
     @IBAction func CaptureButton(_ sender: Any) {
         self.session = NFCTagReaderSession(pollingOption: .iso14443, delegate: self)
-        self.session?.alertMessage = "Hold it still!"
+        self.session?.alertMessage = "Hold Your Phone Near the NFC Tag"
         self.session?.begin()
     }
-
+    
     // MARK: - NFCTagReaderSessionDelegate
     func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) {
         print("Session Begun")
     }
     
     func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) {
-        print("ERROR")
+        print("ERROR \(error)")
     }
     
     func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) {
@@ -58,8 +56,6 @@ class NFC_TagViewController: UIViewController, NFCTagReaderSessionDelegate {
             }
         }
     }
-    
-    
 }
 
 

@@ -28,6 +28,7 @@
 		A8C518352589C06200676CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NFC_TagView.storyboard; sourceTree = "<group>"; };
 		CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFC_TagViewController.swift; sourceTree = "<group>"; };
+		CA4C4236258C373B00B3F00A /* Wine Flight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wine Flight.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		A8C518262589C06000676CB3 /* Wine Flight */ = {
 			isa = PBXGroup;
 			children = (
+				CA4C4236258C373B00B3F00A /* Wine Flight.entitlements */,
 				A8C518272589C06000676CB3 /* AppDelegate.swift */,
 				A8C518292589C06000676CB3 /* SceneDelegate.swift */,
 				A8C5182B2589C06000676CB3 /* ViewController.swift */,
@@ -296,6 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Wine Flight/Wine Flight.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R6MQNLHPL;
 				INFOPLIST_FILE = "Wine Flight/Info.plist";
@@ -318,6 +321,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Wine Flight/Wine Flight.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R6MQNLHPL;
 				INFOPLIST_FILE = "Wine Flight/Info.plist";
