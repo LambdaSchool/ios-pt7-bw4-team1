@@ -37,6 +37,26 @@ class NFC_TagViewController: UIViewController, NFCTagReaderSessionDelegate {
     
     func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) {
         print("Connecting to tag")
+        if tags.count > 1 {
+            session.alertMessage = "More then one tag detected"
+            session.invalidate()
+        }
+        
+        let tag = tags.first!
+        session.connect(to: tag) { (error) in
+            if let error = error {
+                print("Session failed with error: \(error)")
+            }
+            if case let .miFare(sTag) = tag {
+                let UID = sTag.identifier.map { String(format: "%.2hhx", $0)}.joined()
+                print("UUID", UID)
+                session.alertMessage = "UID Captured"
+                session.invalidate()
+                DispatchQueue.main.async {
+                    self.UIDLabel.text = "\(UID)"
+                }
+            }
+        }
     }
     
     

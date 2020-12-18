@@ -11,7 +11,7 @@
         <!--Tag View Controller-->
         <scene sceneID="ziv-zF-QPc">
             <objects>
-                <viewController id="RNe-Ib-ncX" customClass="NFC_TagViewController" customModule="Wine_Flight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NFC_TagView" id="RNe-Ib-ncX" customClass="NFC_TagViewController" customModule="Wine_Flight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kbm-cE-rte">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,13 +35,14 @@
                         <viewLayoutGuide key="safeArea" id="2c7-O0-CWF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uhm-mX-IQ5"/>
                     <connections>
                         <outlet property="UIDLabel" destination="7zd-Af-ZRa" id="0tP-bO-ApI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAm-g8-LV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394.20289855072468" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1304.3478260869567" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>
