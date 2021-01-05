@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Cart-->
         <scene sceneID="j89-4g-6sW">
             <objects>
                 <viewController id="QRX-GN-Cpb" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="3vq-D4-Vg3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fs1-E0-QxE"/>
+                    <navigationItem key="navigationItem" title="My Cart" id="fs1-E0-QxE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NfC-Rz-aFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,8 +30,8 @@
                 <navigationController storyboardIdentifier="CartViewController" automaticallyAdjustsScrollViewInsets="NO" id="9ru-EQ-MWJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="cart" catalog="system" id="xhh-7X-YG3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="19a-CG-PiS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="19a-CG-PiS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
