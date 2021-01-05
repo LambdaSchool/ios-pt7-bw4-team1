@@ -15,14 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="2bj-L1-5Qb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFr-JR-OB4">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="V5M-My-oYr" kind="presentation" modalPresentationStyle="fullScreen" id="XbO-Pa-8eK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3vq-D4-Vg3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SFr-JR-OB4" firstAttribute="centerX" secondItem="2bj-L1-5Qb" secondAttribute="centerX" id="ZTC-4w-fen"/>
+                            <constraint firstItem="SFr-JR-OB4" firstAttribute="centerY" secondItem="2bj-L1-5Qb" secondAttribute="centerY" id="nRk-3n-AfK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Cart" id="fs1-E0-QxE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NfC-Rz-aFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="71.651785714285708"/>
+        </scene>
+        <!--NFC_TagView-->
+        <scene sceneID="rYF-ZK-ulC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NFC_TagView" id="V5M-My-oYr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5T-CK-udj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963" y="492"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YWP-W9-HyJ">
@@ -49,6 +70,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SXZ-Qf-E0Y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sfs-SO-BKh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemPinkColor"/>
