@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A85B1A5225A3EE9B00E3C54B /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5125A3EE9B00E3C54B /* Store.storyboard */; };
+		A85B1A5725A3F27000E3C54B /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5625A3F27000E3C54B /* Map.storyboard */; };
+		A85B1A5A25A3F27A00E3C54B /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5925A3F27A00E3C54B /* Cart.storyboard */; };
 		A8C518282589C06000676CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C518272589C06000676CB3 /* AppDelegate.swift */; };
 		A8C5182A2589C06000676CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C518292589C06000676CB3 /* SceneDelegate.swift */; };
 		A8C5182F2589C06000676CB3 /* Opening.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C5182D2589C06000676CB3 /* Opening.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A85B1A5125A3EE9B00E3C54B /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		A85B1A5625A3F27000E3C54B /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		A85B1A5925A3F27A00E3C54B /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		A8C518242589C06000676CB3 /* Wine Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wine Flight.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C518272589C06000676CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C518292589C06000676CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,10 @@
 		A85B1A4925A3EC3600E3C54B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */,
+				A85B1A5525A3F26200E3C54B /* Cart */,
+				A85B1A5425A3F25B00E3C54B /* Map */,
+				A85B1A5025A3EE8B00E3C54B /* Store */,
 				A85B1A4D25A3EC5700E3C54B /* Launch */,
 				A85B1A4E25A3EC6000E3C54B /* Opening */,
 			);
@@ -95,6 +105,7 @@
 		A85B1A4B25A3EC4300E3C54B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -122,6 +133,30 @@
 			path = Opening;
 			sourceTree = "<group>";
 		};
+		A85B1A5025A3EE8B00E3C54B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				A85B1A5125A3EE9B00E3C54B /* Store.storyboard */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		A85B1A5425A3F25B00E3C54B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A85B1A5625A3F27000E3C54B /* Map.storyboard */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A85B1A5525A3F26200E3C54B /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				A85B1A5925A3F27A00E3C54B /* Cart.storyboard */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		A8C5181B2589C06000676CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +181,6 @@
 				A80D8B5725A3EBA400C2EBFC /* Controllers */,
 				CA4C4236258C373B00B3F00A /* Wine Flight.entitlements */,
 				A80D8B5525A3E9BC00C2EBFC /* App Resources */,
-				CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */,
-				CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */,
 			);
 			path = "Wine Flight";
 			sourceTree = "<group>";
@@ -212,8 +245,11 @@
 			files = (
 				A8C518342589C06200676CB3 /* LaunchScreen.storyboard in Resources */,
 				A8C518312589C06200676CB3 /* Assets.xcassets in Resources */,
+				A85B1A5225A3EE9B00E3C54B /* Store.storyboard in Resources */,
 				CA4C4227258B0EED00B3F00A /* NFC_TagView.storyboard in Resources */,
 				A8C5182F2589C06000676CB3 /* Opening.storyboard in Resources */,
+				A85B1A5725A3F27000E3C54B /* Map.storyboard in Resources */,
+				A85B1A5A25A3F27A00E3C54B /* Cart.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
