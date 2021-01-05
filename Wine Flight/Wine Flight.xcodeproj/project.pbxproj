@@ -413,7 +413,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Wine Flight/Wine Flight.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
-				INFOPLIST_FILE = "/Users/jamesmcdougall/Desktop/Lambda/AllUnitsPractice/12SwiftAndObj-CPart2/BuildWeek/ios-pt7-bw4-team1/Wine Flight/Wine Flight/App Resources/Info.plist";
+				INFOPLIST_FILE = "Wine Flight/App Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,7 +436,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Wine Flight/Wine Flight.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
-				INFOPLIST_FILE = "/Users/jamesmcdougall/Desktop/Lambda/AllUnitsPractice/12SwiftAndObj-CPart2/BuildWeek/ios-pt7-bw4-team1/Wine Flight/Wine Flight/App Resources/Info.plist";
+				INFOPLIST_FILE = "Wine Flight/App Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
