@@ -15,6 +15,12 @@
 		A8C5182F2589C06000676CB3 /* Opening.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C5182D2589C06000676CB3 /* Opening.storyboard */; };
 		A8C518312589C06200676CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C518302589C06200676CB3 /* Assets.xcassets */; };
 		A8C518342589C06200676CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C518322589C06200676CB3 /* LaunchScreen.storyboard */; };
+		A8F1820925A4DE62000C102D /* WineCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F1820825A4DE62000C102D /* WineCategory.swift */; };
+		A8F1820C25A4DE8F000C102D /* WineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F1820B25A4DE8F000C102D /* WineType.swift */; };
+		A8F1821025A5455F000C102D /* WineCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F1820F25A5455F000C102D /* WineCategoryController.swift */; };
+		A8F1821525A556B0000C102D /* WineCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F1821425A556B0000C102D /* WineCategoryViewController.swift */; };
+		A8F1821825A559EF000C102D /* WineCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F1821725A559EF000C102D /* WineCategoryCollectionViewCell.swift */; };
+		A8F1821D25A566A5000C102D /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F1821C25A566A5000C102D /* CustomUI.swift */; };
 		CA4C4227258B0EED00B3F00A /* NFC_TagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */; };
 		CA4C4234258B118800B3F00A /* NFC_TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +36,12 @@
 		A8C518302589C06200676CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C518332589C06200676CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8C518352589C06200676CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F1820825A4DE62000C102D /* WineCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategory.swift; sourceTree = "<group>"; };
+		A8F1820B25A4DE8F000C102D /* WineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineType.swift; sourceTree = "<group>"; };
+		A8F1820F25A5455F000C102D /* WineCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategoryController.swift; sourceTree = "<group>"; };
+		A8F1821425A556B0000C102D /* WineCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategoryViewController.swift; sourceTree = "<group>"; };
+		A8F1821725A559EF000C102D /* WineCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A8F1821C25A566A5000C102D /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
 		CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NFC_TagView.storyboard; sourceTree = "<group>"; };
 		CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFC_TagViewController.swift; sourceTree = "<group>"; };
 		CA4C4236258C373B00B3F00A /* Wine Flight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wine Flight.entitlements"; sourceTree = "<group>"; };
@@ -69,6 +81,7 @@
 		A80D8B5825A3EBA600C2EBFC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A8F1821B25A5669B000C102D /* CustomUI */,
 				A85B1A4A25A3EC3C00E3C54B /* Cells */,
 				A85B1A4925A3EC3600E3C54B /* Storyboards */,
 			);
@@ -78,6 +91,8 @@
 		A80D8B5925A3EBA900C2EBFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8F1820825A4DE62000C102D /* WineCategory.swift */,
+				A8F1820B25A4DE8F000C102D /* WineType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,6 +113,7 @@
 		A85B1A4A25A3EC3C00E3C54B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A8DA0C4125A4BA1D00E6C1B2 /* Store */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -105,6 +121,7 @@
 		A85B1A4B25A3EC4300E3C54B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A8DA0C4925A4BC9A00E6C1B2 /* Store */,
 				CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */,
 			);
 			path = ViewControllers;
@@ -113,6 +130,7 @@
 		A85B1A4C25A3EC4900E3C54B /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A8F1820F25A5455F000C102D /* WineCategoryController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -183,6 +201,30 @@
 				A80D8B5525A3E9BC00C2EBFC /* App Resources */,
 			);
 			path = "Wine Flight";
+			sourceTree = "<group>";
+		};
+		A8DA0C4125A4BA1D00E6C1B2 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				A8F1821725A559EF000C102D /* WineCategoryCollectionViewCell.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		A8DA0C4925A4BC9A00E6C1B2 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				A8F1821425A556B0000C102D /* WineCategoryViewController.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		A8F1821B25A5669B000C102D /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				A8F1821C25A566A5000C102D /* CustomUI.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +303,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8C518282589C06000676CB3 /* AppDelegate.swift in Sources */,
+				A8F1821D25A566A5000C102D /* CustomUI.swift in Sources */,
+				A8F1820C25A4DE8F000C102D /* WineType.swift in Sources */,
+				A8F1821525A556B0000C102D /* WineCategoryViewController.swift in Sources */,
+				A8F1821025A5455F000C102D /* WineCategoryController.swift in Sources */,
 				A8C5182A2589C06000676CB3 /* SceneDelegate.swift in Sources */,
 				CA4C4234258B118800B3F00A /* NFC_TagViewController.swift in Sources */,
+				A8F1820925A4DE62000C102D /* WineCategory.swift in Sources */,
+				A8F1821825A559EF000C102D /* WineCategoryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
