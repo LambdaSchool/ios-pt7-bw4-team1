@@ -25,7 +25,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3vq-D4-Vg3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="SFr-JR-OB4" firstAttribute="centerX" secondItem="2bj-L1-5Qb" secondAttribute="centerX" id="ZTC-4w-fen"/>
                             <constraint firstItem="SFr-JR-OB4" firstAttribute="centerY" secondItem="2bj-L1-5Qb" secondAttribute="centerY" id="nRk-3n-AfK"/>
@@ -54,6 +54,16 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="19a-CG-PiS">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="barTintColor" systemColor="systemPinkColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -86,9 +96,6 @@
     </scenes>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
