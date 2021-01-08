@@ -20,8 +20,6 @@ class WineCategoryViewController: UIViewController {
         wineCategoryCollectionView.delegate = self
         wineCategoryCollectionView.dataSource = self
     }
-    
-    
 }
 
 extension WineCategoryViewController: UICollectionViewDelegate {
