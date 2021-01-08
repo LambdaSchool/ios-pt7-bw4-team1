@@ -8,6 +8,7 @@
 import UIKit
 
 class WineSelection {
+    
     enum WineTypes: String {
         case agliancio = "Agliancio"
         case albarino = "Albarino"
@@ -39,6 +40,7 @@ class WineSelection {
         case sauvignonBlanc = "Sauvignon Blanc"
         case shiraz = "Shiraz"
     }
+    
     enum SelectionTypes: String {
         case NativAgliancio2013 = "2013 Nativ Agliancio"
         case SanSalvatoreRosatoVetere2019 = "2019 San Salvatore Rosato Vetere"
@@ -55,6 +57,7 @@ class WineSelection {
         case PauloLaureanoVinhasVelhasOrganic2017 = "2017 Paulo Laureano Vinhas Velhas Organic"
         case DescendientesDeJosePalaciosBierzoPetalos2018 = "2018 Descendientes De Jose Palacios Bierzo Petalos"
     }
+    
     var wineCategoryName: WineTypes
     var wineSelectionName: String
     var wineSelectionImage: UIImage
