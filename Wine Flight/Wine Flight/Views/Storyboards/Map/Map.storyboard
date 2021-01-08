@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WxK-yU-sgD">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Address-->
-        <scene sceneID="2bf-TE-INM">
+        <scene sceneID="IgN-E3-HKK">
             <objects>
-                <viewController id="MeY-2w-Bya" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="b4E-ZU-L5k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </mapView>
-                    <navigationItem key="navigationItem" title="Address" id="g5i-tW-vsl"/>
+                <viewController id="swH-Zn-9ql" customClass="MapViewController" customModule="Wine_Flight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xk0-Pm-X0a">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MiJ-ZV-TVH">
+                                <rect key="frame" x="0.0" y="140" width="428" height="703"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your address here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yr2-xh-uZY">
+                                <rect key="frame" x="12" y="160" width="404" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-Yx-58G">
+                                <rect key="frame" x="386" y="214" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="7Hf-G0-x5F"/>
+                                    <constraint firstAttribute="height" constant="30" id="adm-3I-Ukc"/>
+                                    <constraint firstAttribute="width" secondItem="WVd-Yx-58G" secondAttribute="height" multiplier="1:1" id="nOR-m5-u6V"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" image="location.fill" catalog="system">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterLocationTapped:" destination="swH-Zn-9ql" eventType="touchUpInside" id="LBx-TQ-pCf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HIb-rZ-5Wi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MiJ-ZV-TVH" firstAttribute="top" secondItem="HIb-rZ-5Wi" secondAttribute="top" id="07w-PN-KoB"/>
+                            <constraint firstItem="MiJ-ZV-TVH" firstAttribute="leading" secondItem="HIb-rZ-5Wi" secondAttribute="leading" id="6Lw-2n-QYU"/>
+                            <constraint firstItem="HIb-rZ-5Wi" firstAttribute="trailing" secondItem="Yr2-xh-uZY" secondAttribute="trailing" constant="12" id="9Mw-2o-iWz"/>
+                            <constraint firstItem="HIb-rZ-5Wi" firstAttribute="trailing" secondItem="MiJ-ZV-TVH" secondAttribute="trailing" id="9cp-fG-in5"/>
+                            <constraint firstItem="Yr2-xh-uZY" firstAttribute="top" secondItem="HIb-rZ-5Wi" secondAttribute="top" constant="20" id="Iy8-Q6-qqv"/>
+                            <constraint firstItem="HIb-rZ-5Wi" firstAttribute="bottom" secondItem="MiJ-ZV-TVH" secondAttribute="bottom" id="RIZ-wJ-zGD"/>
+                            <constraint firstItem="WVd-Yx-58G" firstAttribute="top" secondItem="Yr2-xh-uZY" secondAttribute="bottom" constant="20" id="Tk9-mf-69x"/>
+                            <constraint firstItem="Yr2-xh-uZY" firstAttribute="leading" secondItem="HIb-rZ-5Wi" secondAttribute="leading" constant="12" id="jw8-sZ-L4P"/>
+                            <constraint firstItem="HIb-rZ-5Wi" firstAttribute="trailing" secondItem="WVd-Yx-58G" secondAttribute="trailing" constant="12" id="sp6-ko-0Ij"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Address" id="R2f-YB-DDA"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="Yr2-xh-uZY" id="BY9-5r-z1K"/>
+                        <outlet property="mapView" destination="MiJ-ZV-TVH" id="cwS-VF-0h2"/>
+                        <outlet property="pinLocationButton" destination="WVd-Yx-58G" id="evp-bq-t5G"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A8a-mr-UHe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1QG-Kc-Yr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="71.651785714285708"/>
+            <point key="canvasLocation" x="2093" y="72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hb0-BD-0qO">
@@ -28,7 +73,7 @@
                     <tabBarItem key="tabBarItem" title="" image="map" catalog="system" id="Agg-6q-koZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="8f1-Qh-mXd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <color key="barTintColor" systemColor="systemPinkColor"/>
@@ -43,7 +88,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MeY-2w-Bya" kind="relationship" relationship="rootViewController" id="5tj-vJ-hkI"/>
+                        <segue destination="swH-Zn-9ql" kind="relationship" relationship="rootViewController" id="H4g-nW-gta"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxd-C9-HUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,9 +116,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
