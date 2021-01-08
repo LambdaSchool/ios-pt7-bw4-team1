@@ -17,71 +17,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Jg-LH-6zU">
-                                <rect key="frame" x="0.0" y="88" width="428" height="838"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N7X-2D-k9H">
+                                <rect key="frame" x="0.0" y="88" width="428" height="755"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dga-E5-uMy">
-                                    <size key="itemSize" width="300" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pNO-b8-04E">
+                                    <size key="itemSize" width="130" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="20" maxX="10" maxY="20"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WineCell" id="2u0-P4-Xcz" customClass="WineCategoryCollectionViewCell" customModule="Wine_Flight" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="77.666666666666671" width="300" height="600"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WineCategoryCell" id="vq9-R8-wdk" customClass="WineCategoryCollectionViewCell" customModule="Wine_Flight" customModuleProvider="target">
+                                        <rect key="frame" x="44" y="10" width="340" height="340"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q4l-DD-1pk">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Y3-ev-ph8">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="340"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwF-rV-7a9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2013NativAgliancio" translatesAutoresizingMaskIntoConstraints="NO" id="11a-48-aem">
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="340"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ha-kA-8rc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="340"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K6B-D8-8nM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
-                                                        </imageView>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuK-oZ-RH6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wineCategoryLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwa-RG-q4z">
-                                                                    <rect key="frame" x="34.333333333333329" y="285" width="231.33333333333337" height="30"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstItem="zwa-RG-q4z" firstAttribute="centerY" secondItem="AuK-oZ-RH6" secondAttribute="centerY" id="9Bx-l5-Sv2"/>
-                                                                <constraint firstItem="zwa-RG-q4z" firstAttribute="centerX" secondItem="AuK-oZ-RH6" secondAttribute="centerX" id="qcV-ii-InP"/>
-                                                            </constraints>
-                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wineCategoryLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXr-Ha-D8a">
+                                                            <rect key="frame" x="54.666666666666671" y="155" width="230.66666666666663" height="30"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="K6B-D8-8nM" secondAttribute="bottom" id="4T8-gG-KRF"/>
-                                                        <constraint firstAttribute="bottom" secondItem="AuK-oZ-RH6" secondAttribute="bottom" id="DCm-eV-Ocs"/>
-                                                        <constraint firstAttribute="trailing" secondItem="K6B-D8-8nM" secondAttribute="trailing" id="Krl-iA-MD4"/>
-                                                        <constraint firstItem="K6B-D8-8nM" firstAttribute="top" secondItem="kwF-rV-7a9" secondAttribute="top" id="R09-LD-4hX"/>
-                                                        <constraint firstAttribute="trailing" secondItem="AuK-oZ-RH6" secondAttribute="trailing" id="Tv4-2N-pPv"/>
-                                                        <constraint firstItem="AuK-oZ-RH6" firstAttribute="leading" secondItem="kwF-rV-7a9" secondAttribute="leading" id="eCY-Sa-oDp"/>
-                                                        <constraint firstItem="AuK-oZ-RH6" firstAttribute="top" secondItem="kwF-rV-7a9" secondAttribute="top" id="hqn-MD-lXD"/>
-                                                        <constraint firstItem="K6B-D8-8nM" firstAttribute="leading" secondItem="kwF-rV-7a9" secondAttribute="leading" id="kWs-11-Hyc"/>
+                                                        <constraint firstItem="bXr-Ha-D8a" firstAttribute="centerX" secondItem="8ha-kA-8rc" secondAttribute="centerX" id="50c-LA-QZ4"/>
+                                                        <constraint firstItem="bXr-Ha-D8a" firstAttribute="centerY" secondItem="8ha-kA-8rc" secondAttribute="centerY" id="ADg-du-usd"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="kwF-rV-7a9" firstAttribute="leading" secondItem="Q4l-DD-1pk" secondAttribute="leading" id="aCt-V7-2Oz"/>
-                                                <constraint firstAttribute="trailing" secondItem="kwF-rV-7a9" secondAttribute="trailing" id="aDq-jv-kOp"/>
-                                                <constraint firstItem="kwF-rV-7a9" firstAttribute="top" secondItem="Q4l-DD-1pk" secondAttribute="top" id="fyK-P2-l7Y"/>
-                                                <constraint firstAttribute="bottom" secondItem="kwF-rV-7a9" secondAttribute="bottom" id="mmR-fV-YOd"/>
+                                                <constraint firstAttribute="trailing" secondItem="11a-48-aem" secondAttribute="trailing" id="0Lu-KJ-kNo"/>
+                                                <constraint firstAttribute="trailing" secondItem="8ha-kA-8rc" secondAttribute="trailing" id="28N-b5-Hub"/>
+                                                <constraint firstItem="8ha-kA-8rc" firstAttribute="leading" secondItem="9Y3-ev-ph8" secondAttribute="leading" id="9Ma-4S-xX7"/>
+                                                <constraint firstAttribute="bottom" secondItem="8ha-kA-8rc" secondAttribute="bottom" id="NVJ-f7-uNh"/>
+                                                <constraint firstItem="11a-48-aem" firstAttribute="leading" secondItem="9Y3-ev-ph8" secondAttribute="leading" id="Q3T-KL-xz4"/>
+                                                <constraint firstItem="8ha-kA-8rc" firstAttribute="top" secondItem="9Y3-ev-ph8" secondAttribute="top" id="VnT-Va-ioR"/>
+                                                <constraint firstAttribute="bottom" secondItem="11a-48-aem" secondAttribute="bottom" id="dbV-4h-hgU"/>
+                                                <constraint firstItem="11a-48-aem" firstAttribute="top" secondItem="9Y3-ev-ph8" secondAttribute="top" id="iLs-UO-X56"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="backgroundWineCategoryView" destination="kwF-rV-7a9" id="Wlt-Eq-H8j"/>
-                                            <outlet property="darkOverlayView" destination="AuK-oZ-RH6" id="jHx-2z-4md"/>
-                                            <outlet property="wineCategoryImageView" destination="K6B-D8-8nM" id="x0M-sR-AEk"/>
-                                            <outlet property="wineCategoryLabel" destination="zwa-RG-q4z" id="Lcg-5X-lkW"/>
+                                            <outlet property="backgroundView" destination="9Y3-ev-ph8" id="nn2-Q0-oXP"/>
+                                            <outlet property="darkOverlayView" destination="8ha-kA-8rc" id="EXl-sj-hSn"/>
+                                            <outlet property="wineCategoryLabel" destination="bXr-Ha-D8a" id="Uzi-8U-g5n"/>
+                                            <outlet property="wineImageView" destination="11a-48-aem" id="s1z-Fa-SmB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -90,20 +78,20 @@
                         <viewLayoutGuide key="safeArea" id="8aa-hw-9tx"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
-                            <constraint firstItem="2Jg-LH-6zU" firstAttribute="top" secondItem="8aa-hw-9tx" secondAttribute="top" id="63o-vt-0h7"/>
-                            <constraint firstItem="2Jg-LH-6zU" firstAttribute="trailing" secondItem="8aa-hw-9tx" secondAttribute="trailing" id="o5j-nE-Du4"/>
-                            <constraint firstAttribute="bottom" secondItem="2Jg-LH-6zU" secondAttribute="bottom" id="u2z-bB-tAR"/>
-                            <constraint firstItem="2Jg-LH-6zU" firstAttribute="leading" secondItem="8aa-hw-9tx" secondAttribute="leading" id="xx7-Y2-uKz"/>
+                            <constraint firstItem="N7X-2D-k9H" firstAttribute="top" secondItem="8aa-hw-9tx" secondAttribute="top" id="5ng-08-GMU"/>
+                            <constraint firstItem="8aa-hw-9tx" firstAttribute="bottom" secondItem="N7X-2D-k9H" secondAttribute="bottom" id="Ixg-ey-1rk"/>
+                            <constraint firstItem="N7X-2D-k9H" firstAttribute="leading" secondItem="8aa-hw-9tx" secondAttribute="leading" id="lsO-UV-7aH"/>
+                            <constraint firstItem="8aa-hw-9tx" firstAttribute="trailing" secondItem="N7X-2D-k9H" secondAttribute="trailing" id="mNv-vg-aRA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Wines" id="7JT-yr-6B0"/>
                     <connections>
-                        <outlet property="wineCategoryCollectionView" destination="2Jg-LH-6zU" id="wrn-5A-ynp"/>
+                        <outlet property="wineCategoryCollectionView" destination="N7X-2D-k9H" id="UC2-1G-xqR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg1-Vs-z4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1957.0093457943924" y="71.274298056155516"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XYM-T5-qvd">
@@ -178,6 +166,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2013NativAgliancio" width="340" height="340"/>
         <image name="gift" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
