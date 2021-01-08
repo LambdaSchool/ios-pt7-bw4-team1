@@ -17,7 +17,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZm-ow-dh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="470"/>
+            <point key="canvasLocation" x="1424" y="470"/>
         </scene>
         <!--CartViewController-->
         <scene sceneID="PkQ-TX-IBE">
@@ -27,7 +27,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wa-F5-dXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="471"/>
+            <point key="canvasLocation" x="1030" y="470"/>
         </scene>
         <!--Wines-->
         <scene sceneID="q0y-g6-xYJ">
@@ -55,8 +55,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttd-8f-cGb" userLabel="darkOverlayView">
                                                     <rect key="frame" x="0.0" y="0.0" width="428" height="197"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wineCellLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6q-7V-A0R">
-                                                            <rect key="frame" x="130.66666666666666" y="83.666666666666671" width="166.99999999999997" height="30"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wineCellLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="w6q-7V-A0R">
+                                                            <rect key="frame" x="20" y="83.666666666666671" width="388" height="30"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -66,6 +66,8 @@
                                                     <constraints>
                                                         <constraint firstItem="w6q-7V-A0R" firstAttribute="centerX" secondItem="ttd-8f-cGb" secondAttribute="centerX" id="3op-Iv-Lys"/>
                                                         <constraint firstItem="w6q-7V-A0R" firstAttribute="centerY" secondItem="ttd-8f-cGb" secondAttribute="centerY" id="6mg-8t-0nu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="w6q-7V-A0R" secondAttribute="trailing" constant="20" id="IUQ-Ym-8Fo"/>
+                                                        <constraint firstItem="w6q-7V-A0R" firstAttribute="leading" secondItem="ttd-8f-cGb" secondAttribute="leading" constant="20" id="yPs-fx-Ubi"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -83,7 +85,7 @@
                                         <connections>
                                             <outlet property="wineImageView" destination="BB2-We-PMm" id="UWb-5p-52H"/>
                                             <outlet property="wineLabel" destination="w6q-7V-A0R" id="5bi-RP-9Vm"/>
-                                            <segue destination="LOb-Xe-557" kind="presentation" id="Acr-2p-Ctw"/>
+                                            <segue destination="LOb-Xe-557" kind="presentation" identifier="WineDetailViewController" modalPresentationStyle="fullScreen" id="Acr-2p-Ctw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -107,20 +109,107 @@
             </objects>
             <point key="canvasLocation" x="3026.6355140186915" y="71.922246220302384"/>
         </scene>
-        <!--View Controller-->
+        <!--Wine Detail View Controller-->
         <scene sceneID="rQj-CE-Geb">
             <objects>
-                <viewController id="LOb-Xe-557" sceneMemberID="viewController">
+                <viewController id="LOb-Xe-557" customClass="WineDetailViewController" customModule="Wine_Flight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ed-b2-PbE">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2013 Nativ Agliancio" translatesAutoresizingMaskIntoConstraints="NO" id="T2V-wA-YAS">
+                                <rect key="frame" x="0.0" y="44" width="428" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="mbe-DS-fc5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wineNameLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="wod-Kg-Iby">
+                                <rect key="frame" x="8" y="302" width="412" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="GCA-1d-pnB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SHW-ZQ-6W2">
+                                <rect key="frame" x="0.0" y="338" width="428" height="420"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="bDG-ca-BcM"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-pv-FuH">
+                                <rect key="frame" x="8" y="766.33333333333337" width="412" height="67.666666666666629"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFf-VY-OoM">
+                                <rect key="frame" x="8" y="842" width="412" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qap-w3-KEF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="ADD TO CART">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToCartButtonTapped:" destination="LOb-Xe-557" eventType="touchUpInside" id="3un-nJ-kEg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhN-rg-Yul">
+                                <rect key="frame" x="20" y="44" width="49" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="LOb-Xe-557" eventType="touchUpInside" id="bsd-df-6Q4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vhu-db-9xu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="yhN-rg-Yul" firstAttribute="leading" secondItem="vhu-db-9xu" secondAttribute="leading" constant="20" id="1c5-ou-Ptz"/>
+                            <constraint firstItem="SHW-ZQ-6W2" firstAttribute="leading" secondItem="vhu-db-9xu" secondAttribute="leading" id="80e-zo-bx5"/>
+                            <constraint firstItem="SHW-ZQ-6W2" firstAttribute="top" secondItem="wod-Kg-Iby" secondAttribute="bottom" id="CM4-fM-ghY"/>
+                            <constraint firstItem="T2V-wA-YAS" firstAttribute="leading" secondItem="vhu-db-9xu" secondAttribute="leading" id="GLT-jt-Lfh"/>
+                            <constraint firstItem="wod-Kg-Iby" firstAttribute="centerX" secondItem="0Ed-b2-PbE" secondAttribute="centerX" id="Id4-Iq-ofg"/>
+                            <constraint firstItem="ZFf-VY-OoM" firstAttribute="bottom" secondItem="vhu-db-9xu" secondAttribute="bottom" id="Jam-jA-6rU"/>
+                            <constraint firstItem="vhu-db-9xu" firstAttribute="trailing" secondItem="SHW-ZQ-6W2" secondAttribute="trailing" id="K1o-73-ADo"/>
+                            <constraint firstItem="vhu-db-9xu" firstAttribute="trailing" secondItem="DhE-pv-FuH" secondAttribute="trailing" constant="8" id="PIj-dZ-mxH"/>
+                            <constraint firstItem="ZFf-VY-OoM" firstAttribute="top" secondItem="DhE-pv-FuH" secondAttribute="bottom" constant="8" id="Pcl-9h-zta"/>
+                            <constraint firstItem="DhE-pv-FuH" firstAttribute="top" secondItem="SHW-ZQ-6W2" secondAttribute="bottom" constant="8.3300000000000001" id="QBC-Mo-Ii3"/>
+                            <constraint firstItem="yhN-rg-Yul" firstAttribute="top" secondItem="vhu-db-9xu" secondAttribute="top" id="Yct-xo-ggE"/>
+                            <constraint firstItem="wod-Kg-Iby" firstAttribute="leading" secondItem="vhu-db-9xu" secondAttribute="leading" constant="8" id="Yoi-Bu-Ll6"/>
+                            <constraint firstItem="vhu-db-9xu" firstAttribute="trailing" secondItem="ZFf-VY-OoM" secondAttribute="trailing" constant="8" id="Z4E-8l-4v9"/>
+                            <constraint firstItem="wod-Kg-Iby" firstAttribute="top" secondItem="T2V-wA-YAS" secondAttribute="bottom" constant="8" symbolic="YES" id="evf-fe-Z2k"/>
+                            <constraint firstItem="ZFf-VY-OoM" firstAttribute="centerX" secondItem="0Ed-b2-PbE" secondAttribute="centerX" id="gnw-AO-9TM"/>
+                            <constraint firstItem="vhu-db-9xu" firstAttribute="trailing" secondItem="T2V-wA-YAS" secondAttribute="trailing" id="hVB-Iy-iJ5"/>
+                            <constraint firstItem="DhE-pv-FuH" firstAttribute="leading" secondItem="vhu-db-9xu" secondAttribute="leading" constant="8" id="iTr-Lv-P0J"/>
+                            <constraint firstItem="vhu-db-9xu" firstAttribute="trailing" secondItem="wod-Kg-Iby" secondAttribute="trailing" constant="8" id="kjL-RW-lQ8"/>
+                            <constraint firstItem="T2V-wA-YAS" firstAttribute="top" secondItem="vhu-db-9xu" secondAttribute="top" id="n0b-ic-WdC"/>
+                            <constraint firstItem="ZFf-VY-OoM" firstAttribute="leading" secondItem="vhu-db-9xu" secondAttribute="leading" constant="8" id="v95-PF-qGA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addToCartButton" destination="ZFf-VY-OoM" id="TT8-T4-ZrF"/>
+                        <outlet property="wineImageView" destination="T2V-wA-YAS" id="GNA-PX-eCA"/>
+                        <outlet property="wineNameLabel" destination="wod-Kg-Iby" id="q6b-cg-0aO"/>
+                        <outlet property="winePriceLabel" destination="DhE-pv-FuH" id="LPh-Dc-Ua0"/>
+                        <outlet property="wineTextView" destination="SHW-ZQ-6W2" id="dZk-zH-YZc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUz-1O-knq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3932" y="71"/>
+            <point key="canvasLocation" x="3843" y="72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hGj-7f-BCN">
@@ -156,14 +245,15 @@
                 <tabBarController storyboardIdentifier="StoreViewController" automaticallyAdjustsScrollViewInsets="NO" id="qE9-KB-Z4f" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OE1-rm-efN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemPinkColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="zd5-1b-1fe" kind="relationship" relationship="viewControllers" id="y7l-4U-1sv"/>
-                        <segue destination="aSH-Jb-90b" kind="presentation" id="aZG-09-Zeh"/>
-                        <segue destination="swu-f1-QL3" kind="presentation" id="FRB-TU-MTG"/>
+                        <segue destination="swu-f1-QL3" kind="relationship" relationship="viewControllers" id="fnl-O6-Cua"/>
+                        <segue destination="aSH-Jb-90b" kind="relationship" relationship="viewControllers" id="S30-g7-IrF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDw-QV-etA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -174,9 +264,6 @@
     <resources>
         <image name="2013 Nativ Agliancio" width="340" height="340"/>
         <image name="gift" catalog="system" width="128" height="124"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
