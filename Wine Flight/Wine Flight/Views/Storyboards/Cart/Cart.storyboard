@@ -53,6 +53,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="79y-t1-RT7" kind="presentation" id="Meo-f2-AMv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -60,36 +63,37 @@
                                 <rect key="frame" x="20" y="517" width="374" height="198"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgr-4O-Jf6">
-                                        <rect key="frame" x="0.0" y="0.0" width="133" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEW-xr-HtV">
-                                        <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5009 n sheridan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4l-vd-IwC">
+                                        <rect key="frame" x="0.0" y="26" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLN-l4-BwW">
-                                        <rect key="frame" x="0.0" y="70.5" width="73.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="58" width="66" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AAI-Lt-CmM">
-                                        <rect key="frame" x="0.0" y="99" width="374" height="99"/>
+                                        <rect key="frame" x="0.0" y="84" width="374" height="114"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</string>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="uEW-xr-HtV" secondAttribute="trailing" id="4zg-xq-08y"/>
-                                    <constraint firstItem="uEW-xr-HtV" firstAttribute="leading" secondItem="75c-aO-Y3z" secondAttribute="leading" id="7we-Ru-3ew"/>
                                     <constraint firstItem="AAI-Lt-CmM" firstAttribute="leading" secondItem="75c-aO-Y3z" secondAttribute="leading" id="AL0-B5-K4P"/>
                                     <constraint firstAttribute="trailing" secondItem="AAI-Lt-CmM" secondAttribute="trailing" id="ftv-rx-rL3"/>
+                                    <constraint firstAttribute="trailing" secondItem="h4l-vd-IwC" secondAttribute="trailing" id="qan-Rf-fwN"/>
+                                    <constraint firstItem="h4l-vd-IwC" firstAttribute="leading" secondItem="75c-aO-Y3z" secondAttribute="leading" id="toK-TL-lLz"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztg-wC-nx8">
@@ -100,7 +104,6 @@
                                 </state>
                                 <connections>
                                     <action selector="checkoutButtonPressed:" destination="QRX-GN-Cpb" eventType="touchUpInside" id="8lZ-7x-EMR"/>
-                                    <segue destination="79y-t1-RT7" kind="presentation" modalPresentationStyle="fullScreen" id="avj-Kk-p0o"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,7 +125,6 @@
                     <connections>
                         <outlet property="applePayButton" destination="ztg-wC-nx8" id="b0u-8o-vf3"/>
                         <outlet property="customerMessage" destination="AAI-Lt-CmM" id="f2q-Xb-mrZ"/>
-                        <outlet property="deliveryAddressTextField" destination="uEW-xr-HtV" id="uQM-zs-5NG"/>
                         <outlet property="productTableView" destination="HaA-1E-1jM" id="fev-7i-jvM"/>
                     </connections>
                 </viewController>
@@ -135,7 +137,7 @@
             <objects>
                 <viewController id="79y-t1-RT7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ZP-wG-fcB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="itV-pN-qwc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

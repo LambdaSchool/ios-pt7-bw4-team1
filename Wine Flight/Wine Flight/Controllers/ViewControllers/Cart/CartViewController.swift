@@ -11,13 +11,19 @@ import PassKit
 class CartViewController: UIViewController {
 
     @IBOutlet weak var productTableView: UITableView!
-    @IBOutlet weak var deliveryAddressTextField: UITextField!
     @IBOutlet weak var customerMessage: UITextView!
     @IBOutlet weak var applePayButton: UIButton!
-
+    @IBOutlet weak var addressLabel: UILabel!
     
     let SupportedPaymentNetworks = [PKPaymentNetwork.visa, PKPaymentNetwork.masterCard, PKPaymentNetwork.amex]
     let ApplePaySwagMerchantID = "merchant.com.LambdaSchool.WineFlight2" // Fill in merchant ID here!
+    let cartController = ShoppingCartController()
+    
+    var deliveryAddress: String? {
+        didSet {
+            updateAddress()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +54,18 @@ class CartViewController: UIViewController {
         request.merchantCapabilities = PKMerchantCapability.capability3DS
         request.countryCode = "US"
         request.currencyCode = "USD"
+        
         request.paymentSummaryItems = [
             PKPaymentSummaryItem(label: "Wine", amount: 11.11),
             PKPaymentSummaryItem(label: "WineFlight", amount: 11.11)
         ]
-        request.requiredShippingAddressFields = PKAddressField.all
+
         guard let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request) else { return }
         self.present(applePayController, animated: true, completion: nil)
+    }
+    
+    private func updateAddress() {
+        addressLabel.text = cartController.deliveryAddress
     }
 }
 

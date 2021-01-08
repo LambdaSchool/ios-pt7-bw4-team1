@@ -11,8 +11,7 @@ import Foundation
 class ShoppingCartController{
     
     var products = ShoppingCart.products
-    
-    
+    let deliveryAddress: String? = nil
     
     func addProductToTheCart(add product: Wine) {
         products.append(product)
