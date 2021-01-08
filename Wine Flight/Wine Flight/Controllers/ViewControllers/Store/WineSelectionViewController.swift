@@ -13,11 +13,22 @@ class WineSelectionViewController: UIViewController {
     
     var wineSelectionController = WineSelectionController()
     var wineCell = "WineCell"
+    var wineDetailViewController = "WineDetailViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         wineChoiceTableView.delegate = self
         wineChoiceTableView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == wineDetailViewController {
+            guard let wineDetailVC = segue.destination as? WineDetailViewController,
+                  let indexPath = wineChoiceTableView.indexPathForSelectedRow else { return }
+            
+            let wine = wineSelectionController.wineSelection[indexPath.row]
+            wineDetailVC.wineSelection = wine
+        }
     }
     
 }
