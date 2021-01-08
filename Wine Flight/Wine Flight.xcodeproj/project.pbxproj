@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A841D6ED25A7FE9C0058195C /* WineSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6EC25A7FE9C0058195C /* WineSelectionViewController.swift */; };
 		A85B1A5225A3EE9B00E3C54B /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5125A3EE9B00E3C54B /* Store.storyboard */; };
 		A85B1A5725A3F27000E3C54B /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5625A3F27000E3C54B /* Map.storyboard */; };
 		A85B1A5A25A3F27A00E3C54B /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5925A3F27A00E3C54B /* Cart.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A841D6EC25A7FE9C0058195C /* WineSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSelectionViewController.swift; sourceTree = "<group>"; };
 		A85B1A5125A3EE9B00E3C54B /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		A85B1A5625A3F27000E3C54B /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		A85B1A5925A3F27A00E3C54B /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
@@ -130,7 +132,6 @@
 			children = (
 				A8DA0C4925A4BC9A00E6C1B2 /* Store */,
 				CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */,
-				A8A58A8025A7B68600F8C18F /* WineCategoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -224,6 +225,8 @@
 		A8DA0C4925A4BC9A00E6C1B2 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				A8A58A8025A7B68600F8C18F /* WineCategoryViewController.swift */,
+				A841D6EC25A7FE9C0058195C /* WineSelectionViewController.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				A8C5182A2589C06000676CB3 /* SceneDelegate.swift in Sources */,
 				CA4C4234258B118800B3F00A /* NFC_TagViewController.swift in Sources */,
 				A8A58A8425A7B73000F8C18F /* WineCategoryCollectionViewCell.swift in Sources */,
+				A841D6ED25A7FE9C0058195C /* WineSelectionViewController.swift in Sources */,
 				A8E41EEB25A7CFDC00FB89A8 /* WineSelectionController.swift in Sources */,
 				A8E41EF525A7DEE000FB89A8 /* WineDetailController.swift in Sources */,
 			);
