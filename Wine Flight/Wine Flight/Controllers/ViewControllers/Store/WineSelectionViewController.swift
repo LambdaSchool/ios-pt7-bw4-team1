@@ -8,24 +8,38 @@
 import UIKit
 
 class WineSelectionViewController: UIViewController {
+    
+    @IBOutlet weak var wineChoiceTableView: UITableView!
+    
+    var wineSelectionController = WineSelectionController()
+    var wineCell = "WineCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        wineChoiceTableView.delegate = self
+        wineChoiceTableView.dataSource = self
     }
     
+}
 
-    /*
-    // MARK: - Navigation
+extension WineSelectionViewController: UITableViewDelegate {
+    
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension WineSelectionViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return wineSelectionController.wineSelection.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let selectedWineCell = wineChoiceTableView.dequeueReusableCell(withIdentifier: wineCell, for: indexPath) as? WineSelectionTableViewCell else { return UITableViewCell() }
+        
+        let myWine = wineSelectionController.wineSelection[indexPath.row]
+        selectedWineCell.wineSelection = myWine
+        
+        return selectedWineCell
+    }
 }
 
 

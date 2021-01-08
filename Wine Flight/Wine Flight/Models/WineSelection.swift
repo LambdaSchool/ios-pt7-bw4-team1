@@ -9,6 +9,38 @@ import UIKit
 
 class WineSelection {
     
+    enum WineTypes: String {
+        case agliancio = "Agliancio"
+        case albarino = "Albarino"
+        case albillo = "Albillo"
+        case alicanteBouschet = "Alicante Bouschet"
+        case arneis = "Arneis"
+        case blaufrankisch = "Blaufrankisch"
+        case bourboulenc = "Bourboulenc"
+        case cabernetFranc = "Cabernet Franc"
+        case cabernetSauvignon = "Cabernet Sauvignon"
+        case canaiolo = "Canaiolo"
+        case carignan = "Carignan"
+        case carmenere = "Carmenere"
+        case chardonnay = "Chardonnay"
+        case cheninBlanc = "Chenin Blanc"
+        case cisnault = "Cisnault"
+        case clairette = "Clairette"
+        case corvina = "Corvina"
+        case corvinone = "Corvinone"
+        case furmint = "Furmint"
+        case gamay = "Gamay"
+        case grenache = "Grenache"
+        case malbec = "Malbec"
+        case merlot = "Merlot"
+        case mouvedre = "Mouvedre"
+        case petitVerdot = "Petit Verdot"
+        case pinotNoir = "Pinot Noir"
+        case sangiovese = "Sangiovese"
+        case sauvignonBlanc = "Sauvignon Blanc"
+        case shiraz = "Shiraz"
+    }
+    
     enum SelectionTypes: String {
         case NativAgliancio2013 = "2013 Nativ Agliancio"
         case SanSalvatoreRosatoVetere2019 = "2019 San Salvatore Rosato Vetere"
@@ -26,14 +58,18 @@ class WineSelection {
         case DescendientesDeJosePalaciosBierzoPetalos2018 = "2018 Descendientes De Jose Palacios Bierzo Petalos"
     }
     
-    var wineCategory: String
+    var wineCategoryName: WineTypes
     var wineSelectionName: String
     var wineSelectionImage: UIImage
+    var wineSelectionText: String
+    var winePrice: Double
     
-    init(wineCategory: String, wineSelectionName: String, wineSelectionImage: String) {
-        self.wineCategory = wineCategory
+    init(wineCategoryName: WineTypes, wineSelectionName: String, wineSelectionImage: String, wineSelectionText: String, winePrice: Double) {
+        self.wineCategoryName = wineCategoryName
         self.wineSelectionName = wineSelectionName
         self.wineSelectionImage = UIImage(named: wineSelectionImage)!
+        self.wineSelectionText = wineSelectionText
+        self.winePrice = winePrice
     }
     
 }

@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A841D6ED25A7FE9C0058195C /* WineSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6EC25A7FE9C0058195C /* WineSelectionViewController.swift */; };
+		A841D6F725A819500058195C /* WineSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6F625A819500058195C /* WineSelectionTableViewCell.swift */; };
 		A85B1A5225A3EE9B00E3C54B /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5125A3EE9B00E3C54B /* Store.storyboard */; };
 		A85B1A5725A3F27000E3C54B /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5625A3F27000E3C54B /* Map.storyboard */; };
 		A85B1A5A25A3F27A00E3C54B /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5925A3F27A00E3C54B /* Cart.storyboard */; };
-		A8A58A7B25A7B13400F8C18F /* WineCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A58A7A25A7B13400F8C18F /* WineCategory.swift */; };
-		A8A58A7E25A7B3B000F8C18F /* WineCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A58A7D25A7B3B000F8C18F /* WineCategoryController.swift */; };
-		A8A58A8125A7B68600F8C18F /* WineCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A58A8025A7B68600F8C18F /* WineCategoryViewController.swift */; };
-		A8A58A8425A7B73000F8C18F /* WineCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A58A8325A7B73000F8C18F /* WineCategoryCollectionViewCell.swift */; };
 		A8C518282589C06000676CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C518272589C06000676CB3 /* AppDelegate.swift */; };
 		A8C5182A2589C06000676CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C518292589C06000676CB3 /* SceneDelegate.swift */; };
 		A8C5182F2589C06000676CB3 /* Opening.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C5182D2589C06000676CB3 /* Opening.storyboard */; };
@@ -22,8 +19,6 @@
 		A8C518342589C06200676CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C518322589C06200676CB3 /* LaunchScreen.storyboard */; };
 		A8E41EE825A7C6CE00FB89A8 /* WineSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E41EE725A7C6CE00FB89A8 /* WineSelection.swift */; };
 		A8E41EEB25A7CFDC00FB89A8 /* WineSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E41EEA25A7CFDC00FB89A8 /* WineSelectionController.swift */; };
-		A8E41EF225A7DDE100FB89A8 /* WineDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E41EF125A7DDE100FB89A8 /* WineDetail.swift */; };
-		A8E41EF525A7DEE000FB89A8 /* WineDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E41EF425A7DEE000FB89A8 /* WineDetailController.swift */; };
 		A8F1821D25A566A5000C102D /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F1821C25A566A5000C102D /* CustomUI.swift */; };
 		CA4C4227258B0EED00B3F00A /* NFC_TagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */; };
 		CA4C4234258B118800B3F00A /* NFC_TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */; };
@@ -31,13 +26,10 @@
 
 /* Begin PBXFileReference section */
 		A841D6EC25A7FE9C0058195C /* WineSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSelectionViewController.swift; sourceTree = "<group>"; };
+		A841D6F625A819500058195C /* WineSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		A85B1A5125A3EE9B00E3C54B /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		A85B1A5625A3F27000E3C54B /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		A85B1A5925A3F27A00E3C54B /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
-		A8A58A7A25A7B13400F8C18F /* WineCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategory.swift; sourceTree = "<group>"; };
-		A8A58A7D25A7B3B000F8C18F /* WineCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategoryController.swift; sourceTree = "<group>"; };
-		A8A58A8025A7B68600F8C18F /* WineCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategoryViewController.swift; sourceTree = "<group>"; };
-		A8A58A8325A7B73000F8C18F /* WineCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8C518242589C06000676CB3 /* Wine Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wine Flight.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C518272589C06000676CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C518292589C06000676CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,8 +39,6 @@
 		A8C518352589C06200676CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8E41EE725A7C6CE00FB89A8 /* WineSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSelection.swift; sourceTree = "<group>"; };
 		A8E41EEA25A7CFDC00FB89A8 /* WineSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSelectionController.swift; sourceTree = "<group>"; };
-		A8E41EF125A7DDE100FB89A8 /* WineDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetail.swift; sourceTree = "<group>"; };
-		A8E41EF425A7DEE000FB89A8 /* WineDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailController.swift; sourceTree = "<group>"; };
 		A8F1821C25A566A5000C102D /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
 		CA4C4226258B0EED00B3F00A /* NFC_TagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NFC_TagView.storyboard; sourceTree = "<group>"; };
 		CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFC_TagViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +89,7 @@
 		A80D8B5925A3EBA900C2EBFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A8A58A7A25A7B13400F8C18F /* WineCategory.swift */,
 				A8E41EE725A7C6CE00FB89A8 /* WineSelection.swift */,
-				A8E41EF125A7DDE100FB89A8 /* WineDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,9 +127,7 @@
 		A85B1A4C25A3EC4900E3C54B /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A8A58A7D25A7B3B000F8C18F /* WineCategoryController.swift */,
 				A8E41EEA25A7CFDC00FB89A8 /* WineSelectionController.swift */,
-				A8E41EF425A7DEE000FB89A8 /* WineDetailController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -217,7 +203,7 @@
 		A8DA0C4125A4BA1D00E6C1B2 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				A8A58A8325A7B73000F8C18F /* WineCategoryCollectionViewCell.swift */,
+				A841D6F625A819500058195C /* WineSelectionTableViewCell.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -225,7 +211,6 @@
 		A8DA0C4925A4BC9A00E6C1B2 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				A8A58A8025A7B68600F8C18F /* WineCategoryViewController.swift */,
 				A841D6EC25A7FE9C0058195C /* WineSelectionViewController.swift */,
 			);
 			path = Store;
@@ -314,19 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8E41EF225A7DDE100FB89A8 /* WineDetail.swift in Sources */,
+				A841D6F725A819500058195C /* WineSelectionTableViewCell.swift in Sources */,
 				A8C518282589C06000676CB3 /* AppDelegate.swift in Sources */,
-				A8A58A7B25A7B13400F8C18F /* WineCategory.swift in Sources */,
-				A8A58A8125A7B68600F8C18F /* WineCategoryViewController.swift in Sources */,
 				A8E41EE825A7C6CE00FB89A8 /* WineSelection.swift in Sources */,
-				A8A58A7E25A7B3B000F8C18F /* WineCategoryController.swift in Sources */,
 				A8F1821D25A566A5000C102D /* CustomUI.swift in Sources */,
 				A8C5182A2589C06000676CB3 /* SceneDelegate.swift in Sources */,
 				CA4C4234258B118800B3F00A /* NFC_TagViewController.swift in Sources */,
-				A8A58A8425A7B73000F8C18F /* WineCategoryCollectionViewCell.swift in Sources */,
 				A841D6ED25A7FE9C0058195C /* WineSelectionViewController.swift in Sources */,
 				A8E41EEB25A7CFDC00FB89A8 /* WineSelectionController.swift in Sources */,
-				A8E41EF525A7DEE000FB89A8 /* WineDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
