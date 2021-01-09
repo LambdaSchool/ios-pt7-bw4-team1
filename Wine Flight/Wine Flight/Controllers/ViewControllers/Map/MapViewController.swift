@@ -22,26 +22,29 @@ class MapViewController: UIViewController {
 
 
     @IBAction func enterLocationTapped(_ sender: UIButton) {
-       // add action to drop pin for address entered by user
-
+        let userInput:String = addressTextField.text!
+//        getCoordinate(addressString: userInput, completionHandler: <#T##(CLLocationCoordinate2D, NSError?) -> Void#>)
+updateLocationOnMap(to: baseLocation, with: "Base")
 
     }
 
     let baseLocation = CLLocation(latitude: 37.789530, longitude: -122.397312)
+    let deliveryLocation = CLLocation(latitude: 37.768891, longitude: -122.474240)
 
-    lazy var locationManager: CLLocationManager = {
-          var manager = CLLocationManager()
-          manager.distanceFilter = 10
-          manager.desiredAccuracy = kCLLocationAccuracyBest
-          return manager
-      }()
 
+    private var userTrackingButton: MKUserTrackingButton!
+    private let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        // Do any additional setup after loading the view.
+        userTrackingButton = MKUserTrackingButton(mapView: mapView)
+        userTrackingButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(userTrackingButton)
+        NSLayoutConstraint.activate([
+            userTrackingButton.leadingAnchor.constraint(equalTo: mapView.leadingAnchor, constant: 20),
+            mapView.bottomAnchor.constraint(equalTo: userTrackingButton.bottomAnchor, constant: 20)
+        ])
+
     }
 
 
@@ -56,7 +59,7 @@ class MapViewController: UIViewController {
         let viewRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
         self.mapView.setRegion(viewRegion, animated: true)
     }
-
+//
 //    func updatePlaceMark(to address: String) {
 //
 //        let geoCoder = CLGeocoder()
@@ -66,10 +69,26 @@ class MapViewController: UIViewController {
 //                let location = placemark.location
 //            else { return }
 //
-//            self.updateLocationOnMap(to: location, with: placemark.stringValue)
+//            self.updateLocationOnMap(to: location, with: placemark.baseLocation)
 //        }
 //    }
 
+    func getCoordinate( addressString : String,
+            completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(addressString) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location!
+
+                    completionHandler(location.coordinate, nil)
+                    return
+                }
+            }
+
+            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
+        }
+    }
 
 }
 
@@ -112,15 +131,15 @@ extension CLLocation {
 
 
 
-private extension MKMapView {
-  func centerToLocation(
-    _ location: CLLocation,
-    regionRadius: CLLocationDistance = 1000
-  ) {
-    let coordinateRegion = MKCoordinateRegion(
-      center: location.coordinate,
-      latitudinalMeters: regionRadius,
-      longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
-  }
-}
+//private extension MKMapView {
+//  func centerToLocation(
+//    _ location: CLLocation,
+//    regionRadius: CLLocationDistance = 1000
+//  ) {
+//    let coordinateRegion = MKCoordinateRegion(
+//      center: location.coordinate,
+//      latitudinalMeters: regionRadius,
+//      longitudinalMeters: regionRadius)
+//    setRegion(coordinateRegion, animated: true)
+//  }
+//}
