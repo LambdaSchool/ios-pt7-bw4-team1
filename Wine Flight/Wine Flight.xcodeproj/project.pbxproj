@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C39D54625A90CB700E6D62E /* NewMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C39D54525A90CB700E6D62E /* NewMapViewController.m */; };
 		A841D6ED25A7FE9C0058195C /* WineSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6EC25A7FE9C0058195C /* WineSelectionViewController.swift */; };
 		A85B1A5225A3EE9B00E3C54B /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5125A3EE9B00E3C54B /* Store.storyboard */; };
 		A85B1A5725A3F27000E3C54B /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5625A3F27000E3C54B /* Map.storyboard */; };
@@ -38,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C39D54325A90CB700E6D62E /* Wine Flight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wine Flight-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C39D54425A90CB700E6D62E /* NewMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewMapViewController.h; sourceTree = "<group>"; };
+		3C39D54525A90CB700E6D62E /* NewMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewMapViewController.m; sourceTree = "<group>"; };
 		A841D6EC25A7FE9C0058195C /* WineSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSelectionViewController.swift; sourceTree = "<group>"; };
 		A85B1A5125A3EE9B00E3C54B /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		A85B1A5625A3F27000E3C54B /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -293,6 +297,9 @@
 			isa = PBXGroup;
 			children = (
 				CA89927525A7F9420052BE6B /* MapViewController.swift */,
+				3C39D54425A90CB700E6D62E /* NewMapViewController.h */,
+				3C39D54525A90CB700E6D62E /* NewMapViewController.m */,
+				3C39D54325A90CB700E6D62E /* Wine Flight-Bridging-Header.h */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -372,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C39D54625A90CB700E6D62E /* NewMapViewController.m in Sources */,
 				A8E41EF225A7DDE100FB89A8 /* WineDetail.swift in Sources */,
 				A8C518282589C06000676CB3 /* AppDelegate.swift in Sources */,
 				CA89929925A926340052BE6B /* CheckoutWineDetailViewController.swift in Sources */,
