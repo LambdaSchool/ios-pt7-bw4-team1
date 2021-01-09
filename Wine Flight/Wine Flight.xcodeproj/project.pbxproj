@@ -32,7 +32,6 @@
 		CA89924D25A4DAFD0052BE6B /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89924C25A4DAFD0052BE6B /* ShoppingCart.swift */; };
 		CA89925125A4DE7C0052BE6B /* ShoppingCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89925025A4DE7C0052BE6B /* ShoppingCartController.swift */; };
 		CA89925525A4E3E70052BE6B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89925425A4E3E70052BE6B /* ProductTableViewCell.swift */; };
-		CA89927625A7F9420052BE6B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89927525A7F9420052BE6B /* MapViewController.swift */; };
 		CA89927925A7FB580052BE6B /* CartTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89927825A7FB580052BE6B /* CartTabViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		CA89924C25A4DAFD0052BE6B /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		CA89925025A4DE7C0052BE6B /* ShoppingCartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartController.swift; sourceTree = "<group>"; };
 		CA89925425A4E3E70052BE6B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
-		CA89927525A7F9420052BE6B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CA89927825A7FB580052BE6B /* CartTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,7 +286,6 @@
 		CA89926F25A7F7CB0052BE6B /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				CA89927525A7F9420052BE6B /* MapViewController.swift */,
 				3C39D54425A90CB700E6D62E /* NewMapViewController.h */,
 				3C39D54525A90CB700E6D62E /* NewMapViewController.m */,
 				3C39D54325A90CB700E6D62E /* Wine Flight-Bridging-Header.h */,
@@ -390,7 +387,6 @@
 				A841D6ED25A7FE9C0058195C /* WineSelectionViewController.swift in Sources */,
 				A8E41EEB25A7CFDC00FB89A8 /* WineSelectionController.swift in Sources */,
 				A8E41EF525A7DEE000FB89A8 /* WineDetailController.swift in Sources */,
-				CA89927625A7F9420052BE6B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
