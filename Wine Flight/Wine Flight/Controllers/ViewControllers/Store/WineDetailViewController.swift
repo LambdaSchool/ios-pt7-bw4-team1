@@ -18,6 +18,8 @@ class WineDetailViewController: UIViewController {
     
     var wineSelection: WineSelection?
     
+    var customUI = CustomUI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +28,11 @@ class WineDetailViewController: UIViewController {
         wineTextView.text = wineSelection?.wineSelectionText
         winePriceLabel.text = "$\(wineSelection?.winePrice ?? 0)"
 
+        configureUI()
+    }
+    
+    func configureUI() {
+        customUI.roundedButton(button: addToCartButton)
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {

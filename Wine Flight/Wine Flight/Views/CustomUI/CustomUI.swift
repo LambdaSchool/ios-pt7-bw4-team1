@@ -17,4 +17,8 @@ class CustomUI {
         image.layer.cornerRadius = 25
     }
     
+    func roundedButton(button: UIButton) {
+        button.layer.cornerRadius = button.frame.height / 2
+    }
+    
 }
