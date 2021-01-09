@@ -12,6 +12,8 @@
 		A85B1A5225A3EE9B00E3C54B /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5125A3EE9B00E3C54B /* Store.storyboard */; };
 		A85B1A5725A3F27000E3C54B /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5625A3F27000E3C54B /* Map.storyboard */; };
 		A85B1A5A25A3F27A00E3C54B /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85B1A5925A3F27A00E3C54B /* Cart.storyboard */; };
+		A86BAE9E25A91E3C00DF5B58 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86BAE9D25A91E3C00DF5B58 /* OpeningViewController.swift */; };
+		A86BAEA225A9253D00DF5B58 /* WineFlight.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A86BAEA125A9253D00DF5B58 /* WineFlight.mp4 */; };
 		A8C518282589C06000676CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C518272589C06000676CB3 /* AppDelegate.swift */; };
 		A8C5182A2589C06000676CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C518292589C06000676CB3 /* SceneDelegate.swift */; };
 		A8C5182F2589C06000676CB3 /* Opening.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C5182D2589C06000676CB3 /* Opening.storyboard */; };
@@ -31,6 +33,8 @@
 		A85B1A5125A3EE9B00E3C54B /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		A85B1A5625A3F27000E3C54B /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		A85B1A5925A3F27A00E3C54B /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		A86BAE9D25A91E3C00DF5B58 /* OpeningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
+		A86BAEA125A9253D00DF5B58 /* WineFlight.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WineFlight.mp4; sourceTree = "<group>"; };
 		A8C518242589C06000676CB3 /* Wine Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wine Flight.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C518272589C06000676CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C518292589C06000676CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 		A80D8B5525A3E9BC00C2EBFC /* App Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A86BAEA025A9252B00DF5B58 /* Videos */,
 				A8C518272589C06000676CB3 /* AppDelegate.swift */,
 				A8C518292589C06000676CB3 /* SceneDelegate.swift */,
 				A8C518302589C06200676CB3 /* Assets.xcassets */,
@@ -120,6 +125,7 @@
 		A85B1A4B25A3EC4300E3C54B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A86BAE9C25A91E3000DF5B58 /* Opening */,
 				A8DA0C4925A4BC9A00E6C1B2 /* Store */,
 				CA4C4233258B118800B3F00A /* NFC_TagViewController.swift */,
 			);
@@ -172,6 +178,22 @@
 				A85B1A5925A3F27A00E3C54B /* Cart.storyboard */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		A86BAE9C25A91E3000DF5B58 /* Opening */ = {
+			isa = PBXGroup;
+			children = (
+				A86BAE9D25A91E3C00DF5B58 /* OpeningViewController.swift */,
+			);
+			path = Opening;
+			sourceTree = "<group>";
+		};
+		A86BAEA025A9252B00DF5B58 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				A86BAEA125A9253D00DF5B58 /* WineFlight.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		A8C5181B2589C06000676CB3 = {
@@ -291,6 +313,7 @@
 				CA4C4227258B0EED00B3F00A /* NFC_TagView.storyboard in Resources */,
 				A8C5182F2589C06000676CB3 /* Opening.storyboard in Resources */,
 				A85B1A5725A3F27000E3C54B /* Map.storyboard in Resources */,
+				A86BAEA225A9253D00DF5B58 /* WineFlight.mp4 in Resources */,
 				A85B1A5A25A3F27A00E3C54B /* Cart.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8FAE75125A906C10002E24D /* WineDetailViewController.swift in Sources */,
+				A86BAE9E25A91E3C00DF5B58 /* OpeningViewController.swift in Sources */,
 				A841D6F725A819500058195C /* WineSelectionTableViewCell.swift in Sources */,
 				A8C518282589C06000676CB3 /* AppDelegate.swift in Sources */,
 				A8E41EE825A7C6CE00FB89A8 /* WineSelection.swift in Sources */,
