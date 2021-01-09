@@ -11,7 +11,7 @@
         <!--Address-->
         <scene sceneID="IgN-E3-HKK">
             <objects>
-                <viewController id="swH-Zn-9ql" customClass="MapViewController" customModule="Wine_Flight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="swH-Zn-9ql" customClass="NewMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xk0-Pm-X0a">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,10 +19,17 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MiJ-ZV-TVH">
                                 <rect key="frame" x="0.0" y="140" width="428" height="703"/>
                             </mapView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your address here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yr2-xh-uZY">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the delivery address here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yr2-xh-uZY">
                                 <rect key="frame" x="12" y="160" width="404" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchBox:" destination="swH-Zn-9ql" eventType="editingDidEndOnExit" id="cOl-VH-G0k"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-Yx-58G">
                                 <rect key="frame" x="386" y="214" width="30" height="30"/>
@@ -36,8 +43,41 @@
                                 <state key="normal" image="location.fill" catalog="system">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="enterLocationTapped:" destination="swH-Zn-9ql" eventType="touchUpInside" id="LBx-TQ-pCf"/>
+                                    <action selector="pinLocation:" destination="swH-Zn-9ql" eventType="touchUpInside" id="DU8-ak-MCT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drone Base" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4Z-Q3-jk8">
+                                <rect key="frame" x="311" y="214" width="75" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Beh-ze-PPm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="10"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKR-vd-1WW">
+                                <rect key="frame" x="165.66666666666666" y="791" width="96.999999999999972" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <state key="normal" title="Show Route">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="routeButton:" destination="swH-Zn-9ql" eventType="touchUpInside" id="G9Q-Ns-eWs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,23 +88,27 @@
                             <constraint firstItem="MiJ-ZV-TVH" firstAttribute="leading" secondItem="HIb-rZ-5Wi" secondAttribute="leading" id="6Lw-2n-QYU"/>
                             <constraint firstItem="HIb-rZ-5Wi" firstAttribute="trailing" secondItem="Yr2-xh-uZY" secondAttribute="trailing" constant="12" id="9Mw-2o-iWz"/>
                             <constraint firstItem="HIb-rZ-5Wi" firstAttribute="trailing" secondItem="MiJ-ZV-TVH" secondAttribute="trailing" id="9cp-fG-in5"/>
+                            <constraint firstItem="IKR-vd-1WW" firstAttribute="centerX" secondItem="Xk0-Pm-X0a" secondAttribute="centerX" id="9xi-In-75J"/>
                             <constraint firstItem="Yr2-xh-uZY" firstAttribute="top" secondItem="HIb-rZ-5Wi" secondAttribute="top" constant="20" id="Iy8-Q6-qqv"/>
+                            <constraint firstItem="HIb-rZ-5Wi" firstAttribute="bottom" secondItem="IKR-vd-1WW" secondAttribute="bottom" constant="20" id="Jfc-0D-bvy"/>
+                            <constraint firstItem="WVd-Yx-58G" firstAttribute="bottom" secondItem="a4Z-Q3-jk8" secondAttribute="bottom" id="LF2-3w-7nT"/>
+                            <constraint firstItem="WVd-Yx-58G" firstAttribute="leading" secondItem="a4Z-Q3-jk8" secondAttribute="trailing" id="OHN-CA-Hgm"/>
                             <constraint firstItem="HIb-rZ-5Wi" firstAttribute="bottom" secondItem="MiJ-ZV-TVH" secondAttribute="bottom" id="RIZ-wJ-zGD"/>
                             <constraint firstItem="WVd-Yx-58G" firstAttribute="top" secondItem="Yr2-xh-uZY" secondAttribute="bottom" constant="20" id="Tk9-mf-69x"/>
+                            <constraint firstItem="WVd-Yx-58G" firstAttribute="top" secondItem="a4Z-Q3-jk8" secondAttribute="top" id="cL4-dn-Qak"/>
                             <constraint firstItem="Yr2-xh-uZY" firstAttribute="leading" secondItem="HIb-rZ-5Wi" secondAttribute="leading" constant="12" id="jw8-sZ-L4P"/>
+                            <constraint firstItem="WVd-Yx-58G" firstAttribute="leading" secondItem="a4Z-Q3-jk8" secondAttribute="trailing" id="mRz-0n-JPB"/>
                             <constraint firstItem="HIb-rZ-5Wi" firstAttribute="trailing" secondItem="WVd-Yx-58G" secondAttribute="trailing" constant="12" id="sp6-ko-0Ij"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Address" id="R2f-YB-DDA"/>
                     <connections>
-                        <outlet property="addressTextField" destination="Yr2-xh-uZY" id="BY9-5r-z1K"/>
-                        <outlet property="mapView" destination="MiJ-ZV-TVH" id="cwS-VF-0h2"/>
-                        <outlet property="pinLocationButton" destination="WVd-Yx-58G" id="evp-bq-t5G"/>
+                        <outlet property="mapView" destination="MiJ-ZV-TVH" id="8hG-sj-gs7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1QG-Kc-Yr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2093" y="72"/>
+            <point key="canvasLocation" x="2092.9906542056074" y="71.922246220302384"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hb0-BD-0qO">

@@ -22,6 +22,8 @@
 	<true/>
 	<key>NFCReaderUsageDescription</key>
 	<string>$(PRODUCT_NAME) uses NFC to Scan NFC Tag on drones to verify age</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses map to determine delivery address</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
