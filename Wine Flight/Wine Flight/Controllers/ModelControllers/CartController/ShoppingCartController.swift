@@ -10,19 +10,53 @@ import Foundation
 
 class ShoppingCartController{
     
-    var products = ShoppingCart.products
+  
     let deliveryAddress: String? = nil
+    var winesController = WineSelectionController()
+    var pickedWine = [WineSelection]()
     
-    func addProductToTheCart(add product: Wine) {
-        products.append(product)
+    func addProductToTheCart() {
+        let randomNumber = Int.random(in: 0...2)
+        let wines = winesController.wineSelection
+        
+        pickedWine.append(wines[randomNumber])
+        countItems()
         
     }
     
-    func removeProductFromTheCart(remove index: Int) {
-        products.remove(at: index)
+    func removeProductFromTheCart(remove product: Int) {
+        pickedWine.remove(at: product)
+ 
     }
-    //Get the current product id
-    //Add the product to the cart
+    
+    func countItems() {
+        let dictionary = pickedWine.reduce(into: [:]) { counts, number in
+            counts[number, default: 0] += 1
+        }
+        print(dictionary)
+    }
+
     //Display a message to the user
     
+}
+
+
+//extension Sequence where Element: Hashable {
+//    var iteamized: [Element: Int] {
+//        return self.reduce(into: [:]) { counts, elem in counts[elem, default: 0] += 1 }
+//            }
+//    }
+
+extension WineSelection: Equatable, Hashable {
+    static func == (lhs: WineSelection, rhs: WineSelection) -> Bool {
+        return lhs.wineSelectionName.count == rhs.wineSelectionName.count && lhs.wineSelectionName.sorted() == rhs.wineSelectionName.sorted()
+       }
+
+       func hash(into hasher: inout Hasher) {
+          var hashValue: Int {
+              var hasher = Hasher()
+              self.hash(into: &hasher)
+              return hasher.finalize()
+          }
+       }
 }

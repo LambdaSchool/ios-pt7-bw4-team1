@@ -8,7 +8,7 @@
 import UIKit
 
 class WineCategoryController {
-    var wines: [WineCategory] = [
+     var wines: [WineCategory] = [
         WineCategory(wineType: WineCategory.WineTypes.agliancio.rawValue, wineImage: WineCategory.WineTypes.agliancio.rawValue),
         WineCategory(wineType: WineCategory.WineTypes.albarino.rawValue, wineImage: WineCategory.WineTypes.albarino.rawValue),
         WineCategory(wineType: WineCategory.WineTypes.alicanteBouschet.rawValue, wineImage: WineCategory.WineTypes.alicanteBouschet.rawValue),
