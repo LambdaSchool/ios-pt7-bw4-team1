@@ -9,6 +9,15 @@ import Foundation
 
 class WineSelectionController {
     
+    //CRUD
+    
+    //Add
+    func addWineToCart(wine: WineSelection) {
+        chosenWine.append(wine)
+    }
+    
+    var chosenWine: [WineSelection] = []
+    
     var wineSelection: [WineSelection] = [
         //Agliancio
         WineSelection(wineCategoryName: .agliancio,

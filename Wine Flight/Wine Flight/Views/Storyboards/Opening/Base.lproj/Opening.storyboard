@@ -8,41 +8,65 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Opening View Controller-->
         <scene sceneID="Lnb-ft-Sx2">
             <objects>
-                <viewController id="EgH-9p-FxZ" sceneMemberID="viewController">
+                <viewController id="EgH-9p-FxZ" customClass="OpeningViewController" customModule="Wine_Flight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fkI-ME-xqi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOf-yg-INp">
-                                <rect key="frame" x="20" y="812" width="374" height="50"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVO-ec-raz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htN-nA-aLj">
+                                        <rect key="frame" x="20" y="794" width="374" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kBl-jF-u4a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                        <state key="normal" title="GET STARTED">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tlc-C2-V3c" kind="presentation" identifier="StoreViewController" modalPresentationStyle="fullScreen" id="iP3-3i-UaQ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WineFlight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-Ls-yqp">
+                                        <rect key="frame" x="20" y="120" width="374" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="wWr-fS-sdI"/>
+                                    <constraint firstAttribute="trailing" secondItem="htN-nA-aLj" secondAttribute="trailing" constant="20" id="1ZC-U7-MFk"/>
+                                    <constraint firstItem="qXx-Ls-yqp" firstAttribute="leading" secondItem="BVO-ec-raz" secondAttribute="leading" constant="20" id="Br0-wR-Qhw"/>
+                                    <constraint firstItem="htN-nA-aLj" firstAttribute="leading" secondItem="BVO-ec-raz" secondAttribute="leading" constant="20" id="OmM-er-vp0"/>
+                                    <constraint firstAttribute="trailing" secondItem="qXx-Ls-yqp" secondAttribute="trailing" constant="20" id="Pi5-Jd-2am"/>
+                                    <constraint firstItem="qXx-Ls-yqp" firstAttribute="top" secondItem="BVO-ec-raz" secondAttribute="top" constant="120" id="S0o-Mi-Gzv"/>
+                                    <constraint firstAttribute="bottom" secondItem="htN-nA-aLj" secondAttribute="bottom" constant="52" id="z7O-3o-khc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
-                                <state key="normal" title="GET STARTED">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tlc-C2-V3c" kind="presentation" identifier="ToStoreViewController" modalPresentationStyle="fullScreen" id="6g3-ap-IHv"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Map-Sq-dUx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vOf-yg-INp" firstAttribute="bottom" secondItem="Map-Sq-dUx" secondAttribute="bottom" id="7EL-s5-sgf"/>
-                            <constraint firstItem="Map-Sq-dUx" firstAttribute="trailing" secondItem="vOf-yg-INp" secondAttribute="trailing" constant="20" id="L3c-ZT-prR"/>
-                            <constraint firstItem="vOf-yg-INp" firstAttribute="leading" secondItem="Map-Sq-dUx" secondAttribute="leading" constant="20" id="tQC-eA-Ymw"/>
+                            <constraint firstItem="BVO-ec-raz" firstAttribute="top" secondItem="fkI-ME-xqi" secondAttribute="top" id="7hi-HY-CM0"/>
+                            <constraint firstAttribute="bottom" secondItem="BVO-ec-raz" secondAttribute="bottom" id="FGE-vW-IDu"/>
+                            <constraint firstItem="BVO-ec-raz" firstAttribute="trailing" secondItem="Map-Sq-dUx" secondAttribute="trailing" id="TuV-AD-gep"/>
+                            <constraint firstItem="BVO-ec-raz" firstAttribute="leading" secondItem="Map-Sq-dUx" secondAttribute="leading" id="tkY-3A-EG3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getStartedButton" destination="htN-nA-aLj" id="qqs-iS-fTn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWO-Dn-SY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="72"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="71.651785714285708"/>
         </scene>
         <!--StoreViewController-->
         <scene sceneID="y6D-bi-YU3">
