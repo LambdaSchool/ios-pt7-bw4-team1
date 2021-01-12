@@ -73,7 +73,7 @@
             NSLog(@"Error %@", error.description);
         } else {
             return;
-//
+            //
         }
     }];
 }
@@ -89,13 +89,13 @@
     [self.mapView setRegion:region animated:YES];
     [self reverseGeocode:self.location];
 
-    }
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
 
-    @end
+@end
 
 
