@@ -13,11 +13,9 @@ class NFC_TagViewController: UIViewController, NFCTagReaderSessionDelegate {
     @IBOutlet weak var UIDLabel: UILabel!
     var session: NFCReaderSession?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
     @IBAction func CaptureButton(_ sender: Any) {
         self.session = NFCTagReaderSession(pollingOption: .iso14443, delegate: self)
