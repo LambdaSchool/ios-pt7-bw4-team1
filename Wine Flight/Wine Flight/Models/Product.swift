@@ -14,17 +14,12 @@ class Product {
 //    let wineSelection: [WineSelection]
     let image: UIImage
     let amount: Int
-     
     
     internal init( wineSelection: WineSelection, image: UIImage, amount: Int) {
 //        self.wineSelection = WineSelectionController.wineSelection
         self.image = image
         self.amount = amount
     }
-    
-    
-    
-    
 }
 
 

@@ -9,7 +9,7 @@ import UIKit
 import PassKit
 
 class CartViewController: UIViewController {
-
+    
     @IBOutlet weak var productTableView: UITableView!
     @IBOutlet weak var customerMessage: UITextView!
     @IBOutlet weak var applePayButton: UIButton!
@@ -32,72 +32,48 @@ class CartViewController: UIViewController {
         productTableView.dataSource = self
         productTableView.backgroundColor = UIColor.clear
         productTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-    
-        
         applePayButton.isHidden = !PKPaymentAuthorizationViewController.canMakePayments(usingNetworks: SupportedPaymentNetworks)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         productTableView.reloadData()
     }
-
+    
     
     // MARK: - Navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if  segue.identifier == "ToDetailVC",
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "ToDetailVC",
             let destination = segue.destination as? CheckoutWineDetailViewController,
             let wineIndex = productTableView.indexPathForSelectedRow?.row
         {
-        destination.wine = cartController.pickedWine[wineIndex]
+            destination.wine = cartController.pickedWine[wineIndex]
         }
+    }
     
-
- }
-
     @IBAction func checkoutButtonPressed(_ sender: Any) {
         //Pass all textFields and wines through
-        var price = 0.0
-        for iteam in cartController.pickedWine {
-            price = iteam.winePrice
-        }
-        
-        
         let request = PKPaymentRequest()
         request.merchantIdentifier = ApplePaySwagMerchantID
         request.supportedNetworks = SupportedPaymentNetworks
         request.merchantCapabilities = PKMerchantCapability.capability3DS
         request.countryCode = "US"
         request.currencyCode = "USD"
-        
         request.paymentSummaryItems = [
-            PKPaymentSummaryItem(label: "Wine", amount: NSDecimalNumber(value: price)),
-            PKPaymentSummaryItem(label: "WineFlight", amount: NSDecimalNumber(value: price))
+            PKPaymentSummaryItem(label: "Wine", amount: NSDecimalNumber(value: cartController.total)),
+            PKPaymentSummaryItem(label: "WineFlight", amount: NSDecimalNumber(value: cartController.total))
         ]
-
+        
         guard let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request) else { return }
         applePayController.delegate = self
         self.present(applePayController, animated: true, completion: nil)
     }
     
-//    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
-//        if successful place order {
-//            self.dismiss(animated: true, completion: {
-//        // navigate to home screen
-//            })
-//        } else if failed place order {
-//            self.dismiss(animated: true, completion: {
-//        // show errors
-//             })
-//        } else { // if cancelled
-//            self.dismiss(animated: true)
-//        }
-//    }
-    
     @IBAction func AddButtonPressed(_ sender: Any) {
         cartController.addProductToTheCart()
-        productTableView.reloadData()
+        DispatchQueue.main.async {
+            self.productTableView.reloadData()
+        }
     }
     
     private func updateAddress() {
@@ -121,26 +97,21 @@ extension CartViewController:  UITableViewDataSource, UITableViewDelegate {
         return cell
         
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-        cartController.removeProductFromTheCart(remove: indexPath.item)
+            cartController.removeProductFromTheCart(remove: indexPath.item)
             productTableView.reloadData()
         }
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
-        
-    }
-    
 }
 
 extension CartViewController: PKPaymentAuthorizationViewControllerDelegate {
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: ((PKPaymentAuthorizationStatus) -> Void)) {
-    completion(PKPaymentAuthorizationStatus.success)
-  }
-  
+        completion(PKPaymentAuthorizationStatus.success)
+    }
+    
     func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
-    controller.dismiss(animated: true, completion: nil)
-  }
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
